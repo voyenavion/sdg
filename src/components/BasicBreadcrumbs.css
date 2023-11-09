@@ -1,0 +1,15 @@
+.bc {
+  font-family: "kulim-park-extra-light";
+  color: #20b2aa;
+  text-align: center;
+  place-items: center;
+  justify-content: center;
+  
+  .MuiLink-button {
+    color: #20b2aa;
+  }
+}
+
+.MuiLink-button {
+  color: #20b2aa;
+}
