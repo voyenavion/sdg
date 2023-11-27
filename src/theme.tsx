@@ -18,7 +18,11 @@ const theme = createTheme({
       main: red.A400,
     },
     background: {
-      default: '#323232'
+      default: '#323232',
+      paper: '#292929'
+    },
+    text: {
+      primary: '#ffffff'
     }
   },
   typography: {

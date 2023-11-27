@@ -1,4 +1,4 @@
-export default function Github () {
+export default function Contact () {
     return (
     <div>
         {"This is my music."}

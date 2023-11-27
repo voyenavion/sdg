@@ -6,8 +6,8 @@ import navConstants from './constants/navConstants'
 function App() {
 
   return (
-    <Container maxWidth="sm">
-    <AppBar enableColorOnDark position='fixed'>
+    <Container>
+    <AppBar enableColorOnDark color='primary' position='fixed' sx={{bgcolor:'secondary'}}>
     <Container maxWidth="xl" sx={{flexFlow:'row'}}>
       <Toolbar>
       <Box>
@@ -16,8 +16,8 @@ function App() {
       </Typography>
       </Box>
       <Divider/>
-      <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, flexDirection:'row-reverse', gap:'10px'  }}>
-        {Object.entries(navConstants).map((e) => {
+      <Box color='secondary' sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, flexDirection:'row-reverse', gap:'10px'  }}>
+        {Object.entries(navConstants).reverse().map((e) => {
           return CustomLink(e[1])
         })
         }

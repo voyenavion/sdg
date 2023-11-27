@@ -6,7 +6,7 @@ type CustomLinkProps = {to: string, display: string}
 
 function CustomLink(props: CustomLinkProps) {
   return <Link
-    color={deepOrange[600]}
+    color={'secondary.dark'}
     component={NavLink}
     to={props.to}
     underline="hover"

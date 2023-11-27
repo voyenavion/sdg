@@ -6,14 +6,13 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import './components/BasicBreadcrumbs.css'
 import Home from './Home.tsx'
 import { CssBaseline, ThemeProvider } from '@mui/material'
-import Github from './pages/Github.tsx'
+import Work from './pages/Work.tsx'
 import About from './pages/About.tsx'
-import Music from './pages/Music.tsx'
 import theme from './theme.tsx'
 import navConstants from './constants/navConstants.tsx';
+import Contact from './pages/Contact.tsx';
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -24,9 +23,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
    <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<Home />} />
-        <Route path={navConstants.work.to} element={<Github />} />
+        <Route path={navConstants.work.to} element={<Work />} />
         <Route path={navConstants.about.to} element={<About />} />
-        <Route path="my-music" element={<Music />} />
+        <Route path={navConstants.contact.to} element={<Contact />} />
       </Route>
     </Routes>
    </BrowserRouter>   
