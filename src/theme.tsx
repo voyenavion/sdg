@@ -8,18 +8,25 @@ const theme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#556cd6',
+      main: '#0E2954',
 
     },
     secondary: {
-      main: '#19857b',
+      main: '#1F6E8C',
+    },
+    info: {
+      main: '#84A7A1'
+    },
+    success: {
+      main: '#2E8A99'
+
     },
     error: {
       main: red.A400,
     },
     background: {
-      default: '#323232',
-      paper: '#292929'
+      default: '#0E2954',
+      paper: '#1F6E8C'
     },
     text: {
       primary: '#ffffff'

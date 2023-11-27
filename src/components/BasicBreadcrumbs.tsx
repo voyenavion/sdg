@@ -16,14 +16,14 @@ export default function BasicBreadcrumbs() {
     return (
         <div role="presentation" onClick={handleClick}>
                 <Container sx={{display: "inline-flex", justifyContent: "center", alignContent: "space-evenly", gap: "30px"}}>
-                <Link color="secondary" component={NavLink} to={navConstants.work.to}  underline="hover" sx={{"&:hover":{"&:active": {color: deepOrange[600]}}}}>
+                <Link color='info.main' component={NavLink} to={navConstants.work.to}  underline="hover" sx={{"&:hover":{"&:active": {color: deepOrange[600]}}}}>
                     {navConstants.work.display}
                 </Link>
-                <Link color="secondary" component={NavLink} to={navConstants.about.to} underline="hover">
+                <Link color='info.main' component={NavLink} to={navConstants.about.to} underline="hover">
                 {navConstants.about.display}
 
                 </Link>
-                <Link color="secondary" component={NavLink} to={navConstants.contact.to}  underline="hover">
+                <Link color='info.main' component={NavLink} to={navConstants.contact.to}  underline="hover">
                 {navConstants.contact.display}
                 </Link>
                 </Container>

@@ -6,12 +6,12 @@ import navConstants from './constants/navConstants'
 function App() {
 
   return (
-    <Container>
-    <AppBar enableColorOnDark color='primary' position='fixed' sx={{bgcolor:'secondary'}}>
+    <Container maxWidth="lg">
+    <AppBar enableColorOnDark color='primary' position='fixed'>
     <Container maxWidth="xl" sx={{flexFlow:'row'}}>
       <Toolbar>
       <Box>
-      <Typography>
+      <Typography color='success.main' variant='h5'>
       Shaun David Gould
       </Typography>
       </Box>

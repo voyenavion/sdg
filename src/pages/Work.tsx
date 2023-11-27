@@ -9,7 +9,7 @@ export default function Work () {
        <Box sx={{display: 'flex', flexFlow: 'column', flexGrow:1 ,justifyContent:'safe-space-evenly'}}>
        
             {projects.map((e)=>{
-                return <Paper elevation={10} sx={{flexFlow:'row' ,m:2, p:2, flexGrow:'1', color:'secondary.light'}}>
+                return <Paper elevation={10} sx={{flexFlow:'row' ,m:2, p:2, flexGrow:'1', color:'primary.dark'}}>
                 
                 <Grid container spacing={2} >
                             
