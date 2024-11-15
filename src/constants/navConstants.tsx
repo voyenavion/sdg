@@ -1,1 +1,6 @@
-export default {home:{to:"/", display:"Home"}, work:{to:"github-hits",display:"Work"},about:{to:"about",display:"About"},contact:{to:"contact",display:"Contact"}}
+export default [
+  { to: "/", display: "Home" },
+  { to: "github-hits", display: "Work" },
+  { to: "about", display: "About" },
+  { to: "contact", display: "Contact" },
+];

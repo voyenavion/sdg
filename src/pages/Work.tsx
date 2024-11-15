@@ -1,41 +1,104 @@
 import { Box, Grid, Paper, Typography } from "@mui/material";
-const projects = [{text: "EON Explorer", 
-                    summary: "I spearheaded the substantial customization of an existing explorer for Horizen Labs' Ethereum-style blockchain. An explorer allows a user to find all the transactions and data that are important to them and navigate to other relevant accounts and smart-contracts."
+import CustomLink from "../components/CustomLink";
 
-}, {text: "Text Subscription App", summary: "I developed this prototype to manage large numbers of customer text subscriptions using the Twilio API, Java, Spring Boot, React, and AWS"}]
+type Project = {
+  text: string;
+  summary: string;
+  image: string;
+  links: Array<LinkInfo>;
+};
+type LinkInfo = { display: string; to: string };
 
-export default function Work () {
-    return (
-       <Box sx={{display: 'flex', flexFlow: 'column', flexGrow:1 ,justifyContent:'safe-space-evenly'}}>
-       
-            {projects.map((e)=>{
-                return <Paper elevation={10} sx={{flexFlow:'row' ,m:2, p:2, flexGrow:'1', color:'primary.dark'}}>
-                
-                <Grid container spacing={2} >
-                            
-                        <Grid item lg={4} component='img' src="/eon-explorer.png"/>
-                        
-                        <Grid item lg={8}>
-                        <Grid container spacing={2}>
-                        <Grid item lg={12}>
-                        <Typography align='center' variant='h5'>
-                            {e.text}
-                        </Typography>
-                        </Grid>
-                        <Grid item>
-                        <Typography>
-                            {e.summary}
-                        </Typography>
-                        </Grid>
-                        </Grid>
-                        </Grid>
-                        
+const projects: Array<Project> = [
+  {
+    text: "EON Explorer",
+    summary:
+      "I spearheaded the substantial customization of an existing explorer for Horizen Labs' Ethereum-style blockchain. An explorer allows a user to find all the transactions and data that are important to them and navigate to other relevant accounts and smart-contracts.",
+    image: "/eon-explorer.jpg",
+    links: [
+      { display: "Site", to: "https://eon-explorer.horizenlabs.io/" },
+      { display: "Code", to: "https://github.com/HorizenLabs/eon-explorer" },
+    ],
+  },
+  {
+    text: "Text Subscription App",
+    summary:
+      "I developed this prototype to manage large numbers of customer text subscriptions using the Twilio API, Java, Spring Boot, React, and AWS.",
+    image: "/text-messenger.jpg",
+    links: [
+      {
+        display: "Front-end Code",
+        to: "https://github.com/voyenavion/text-messenger",
+      },
+      {
+        display: "Back-end Code",
+        to: "https://github.com/voyenavion/textMessager",
+      },
+    ],
+  },
+  {
+    text: "Tic Tac Toe",
+    summary:
+      "Simple tic tac toe game but with a larger grid. I host it using Cloudflare pages, a very cool tool that will redeploy the code whenever there are changes to the main branch of the github repo.",
+    image: "/tic-tac-toe.jpg",
+    links: [
+      { display: "Site", to: "https://tic-tac-toe-49o.pages.dev/" },
+      { display: "Code", to: "https://github.com/voyenavion/tic-tac-toe" },
+    ],
+  },
+];
 
+export default function Work() {
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        flexFlow: "column",
+        flexGrow: 1,
+        justifyContent: "safe-space-evenly",
+      }}
+    >
+      {projects.map((e, index) => {
+        return (
+          <Paper
+            key={index}
+            elevation={10}
+            sx={{
+              flexFlow: "row",
+              m: 2,
+              p: 2,
+              flexGrow: "1",
+              color: "primary",
+            }}
+          >
+            <Grid container spacing={2}>
+              <Grid item lg={4} component="img" src={e.image} />
+
+              <Grid item lg={8}>
+                <Grid container spacing={2}>
+                  <Grid item lg={12}>
+                    <Typography align="center" variant="h5">
+                      {e.text}
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography>{e.summary}</Typography>
+                  </Grid>
+                  <Grid item>
+                    {e.links.map((link, index) => {
+                      return (
+                        <div key={index}>
+                          {CustomLink({ link, index, color: "secondary" })}
+                        </div>
+                      );
+                    })}
+                  </Grid>
                 </Grid>
-                </Paper>
-            })}
-            
-  
-       </Box>
-    )
+              </Grid>
+            </Grid>
+          </Paper>
+        );
+      })}
+    </Box>
+  );
 }
