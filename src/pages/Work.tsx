@@ -1,4 +1,4 @@
-import { Box, Grid, Paper, Typography } from "@mui/material";
+import { Avatar, Box, Grid, Paper, Typography } from "@mui/material";
 import CustomLink from "../components/CustomLink";
 
 type Project = {
@@ -14,7 +14,7 @@ const projects: Array<Project> = [
     text: "EON Explorer",
     summary:
       "I spearheaded the substantial customization of an existing explorer for Horizen Labs' Ethereum-style blockchain. An explorer allows a user to find all the transactions and data that are important to them and navigate to other relevant accounts and smart-contracts.",
-    image: "/eon-explorer.jpg",
+    image: "/favicon_128x128.png",
     links: [
       { display: "Site", to: "https://eon-explorer.horizenlabs.io/" },
       { display: "Code", to: "https://github.com/HorizenLabs/eon-explorer" },
@@ -24,7 +24,7 @@ const projects: Array<Project> = [
     text: "Text Subscription App",
     summary:
       "I developed this prototype to manage large numbers of customer text subscriptions using the Twilio API, Java, Spring Boot, React, and AWS.",
-    image: "/text-messenger.jpg",
+    image: "/megaphone-with-sound-waves.svg",
     links: [
       {
         display: "Front-end Code",
@@ -62,17 +62,19 @@ export default function Work() {
         return (
           <Paper
             key={index}
-            elevation={10}
+            elevation={24}
             sx={{
               flexFlow: "row",
               m: 2,
               p: 2,
               flexGrow: "1",
-              color: "primary",
+              background: "grey.200",
             }}
           >
             <Grid container spacing={2}>
-              <Grid item lg={4} component="img" src={e.image} />
+              <Grid item lg={4}>
+                <Avatar sx={{width: "15rem", height: "15rem"}} src={e.image}/>
+              </Grid>
 
               <Grid item lg={8}>
                 <Grid container spacing={2}>
@@ -88,7 +90,12 @@ export default function Work() {
                     {e.links.map((link, index) => {
                       return (
                         <div key={index}>
-                          {CustomLink({ link, index, color: "secondary" })}
+                          {CustomLink({
+                            link,
+                            index,
+                            color: "secondary",
+                            newTab: true,
+                          })}
                         </div>
                       );
                     })}
