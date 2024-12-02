@@ -21,6 +21,16 @@ const projects: Array<Project> = [
     ],
   },
   {
+    text: "Tic Tac Toe",
+    summary:
+      "Simple tic tac toe game but with a larger grid. I host it using Cloudflare pages, a very cool tool that will redeploy the code whenever there are changes to the main branch of the github repo.",
+    image: "/tic-tac-toe.jpg",
+    links: [
+      { display: "Site", to: "https://tic-tac-toe-49o.pages.dev/" },
+      { display: "Code", to: "https://github.com/voyenavion/tic-tac-toe" },
+    ],
+  },
+  {
     text: "Text Subscription App",
     summary:
       "I developed this prototype to manage large numbers of customer text subscriptions using the Twilio API, Java, Spring Boot, React, and AWS.",
@@ -36,16 +46,7 @@ const projects: Array<Project> = [
       },
     ],
   },
-  {
-    text: "Tic Tac Toe",
-    summary:
-      "Simple tic tac toe game but with a larger grid. I host it using Cloudflare pages, a very cool tool that will redeploy the code whenever there are changes to the main branch of the github repo.",
-    image: "/tic-tac-toe.jpg",
-    links: [
-      { display: "Site", to: "https://tic-tac-toe-49o.pages.dev/" },
-      { display: "Code", to: "https://github.com/voyenavion/tic-tac-toe" },
-    ],
-  },
+  
 ];
 
 export default function Work() {
