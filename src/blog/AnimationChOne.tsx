@@ -70,7 +70,7 @@ const AnimationChOne: React.FC = () => {
           animations can run.
         </Typography>
         <Typography variant="body1" gutterBottom>
-          The next thing I learned about was the P5 library. It's the leading JS
+          The next thing I learned about was the p5 library. It's the leading JS
           animation library, and it's an offshoot of a Java animation library
           called Process. It has a lot of users, a great sandbox, and it's easy
           to find examples.
