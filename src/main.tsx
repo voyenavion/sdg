@@ -9,6 +9,9 @@ import About from "./pages/About.tsx";
 import theme from "./theme.tsx";
 import navConstants from "./constants/navConstants.tsx";
 import Contact from "./pages/Contact.tsx";
+import Blog from "./pages/Blog.tsx";
+import blogConstants from "./constants/blogConstants.tsx";
+import AnimationChOne from "./blog/AnimationChOne.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -21,6 +24,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
             <Route path={navConstants[1].to} element={<Work />} />
             <Route path={navConstants[2].to} element={<About />} />
             <Route path={navConstants[3].to} element={<Contact />} />
+            <Route path={navConstants[4].to} element={<Blog />} />
+            <Route path={`blog/${blogConstants[0].to}`} element={< AnimationChOne/>} />
           </Route>
         </Routes>
       </BrowserRouter>
