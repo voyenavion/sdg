@@ -13,7 +13,7 @@ const AnimationChOne: React.FC = () => {
   }, [play]);
 
   const animate = (p: p5) => {
-    let x = 0;
+   
 
     p.setup = () => {
       const parentElement = renderRef.current as HTMLElement | null;
@@ -26,6 +26,7 @@ const AnimationChOne: React.FC = () => {
       p.background(255);
 
       const d = 100;
+      let x = -1 * d/2;
       const circle = p.circle(x, 100, d);
 
       circle.stroke(255, 0, 0);
