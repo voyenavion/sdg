@@ -46,7 +46,6 @@ const projects: Array<Project> = [
       },
     ],
   },
-  
 ];
 
 export default function Work() {
@@ -74,7 +73,10 @@ export default function Work() {
           >
             <Grid container spacing={2}>
               <Grid item lg={4}>
-                <Avatar sx={{width: "15rem", height: "15rem"}} src={e.image}/>
+                <Avatar
+                  sx={{ width: "15rem", height: "15rem" }}
+                  src={e.image}
+                />
               </Grid>
 
               <Grid item lg={8}>

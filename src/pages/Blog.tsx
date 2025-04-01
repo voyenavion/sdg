@@ -5,17 +5,17 @@ import blogConstants from "../constants/blogConstants";
 export default function Blog() {
   return (
     <div>
-      {blogConstants.map((e)=>{
+      {blogConstants.map((e) => {
         return (
           <Link
-        color="info.main"
-        component={NavLink}
-        to={e.to}
-        underline="hover"
-      >
-        {e.display} 
-      </Link>
-        )
+            color="info.main"
+            component={NavLink}
+            to={e.to}
+            underline="hover"
+          >
+            {e.display}
+          </Link>
+        );
       })}
     </div>
   );

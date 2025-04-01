@@ -25,7 +25,10 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
             <Route path={navConstants[2].to} element={<About />} />
             <Route path={navConstants[3].to} element={<Contact />} />
             <Route path={navConstants[4].to} element={<Blog />} />
-            <Route path={`blog/${blogConstants[0].to}`} element={< AnimationChOne/>} />
+            <Route
+              path={`blog/${blogConstants[0].to}`}
+              element={<AnimationChOne />}
+            />
           </Route>
         </Routes>
       </BrowserRouter>

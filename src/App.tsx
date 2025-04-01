@@ -30,9 +30,9 @@ function App() {
             >
               {Object.entries(navConstants)
                 .reverse()
-              .map((e, index) => {
-                return CustomLink({ link: e[1], index: index });
-              })}
+                .map((e, index) => {
+                  return CustomLink({ link: e[1], index: index });
+                })}
             </Box>
           </Toolbar>
         </Container>
