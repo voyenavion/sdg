@@ -65,7 +65,7 @@ const AnimationChOne: React.FC = () => {
       </span>
       <Box sx={{ padding: 2 }}>
         <Typography variant="body1" gutterBottom>
-          The first thing I learned about within browser animation was the
+          The first thing I learned about with in-browser animation was the
           canvas element. It is a special HTML native element in which
           animations can run.
         </Typography>
