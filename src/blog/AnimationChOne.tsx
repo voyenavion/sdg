@@ -91,7 +91,7 @@ const AnimationChOne: React.FC = () => {
         <Typography variant="body1" gutterBottom>
           To make it work nicely in React, I used a simple state variable{" "}
           <code>play</code> and a <code>useEffect</code> hook to create the p5
-          instance and remove it when the component unmounts. The removal as a
+          instance and remove it as needed. The removal as a
           cleanup function returned by the <code>useEffect</code> hook was all
           Copilot's idea, which I'm quite impressed by.
         </Typography>
