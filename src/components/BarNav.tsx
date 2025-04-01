@@ -6,7 +6,7 @@ import Paper from "@mui/material/Paper";
 import Popper from "@mui/material/Popper";
 import MenuItem from "@mui/material/MenuItem";
 import MenuList from "@mui/material/MenuList";
-import navConstants from "./constants/navConstants";
+import navConstants, { LinkType } from "../constants/navConstants";
 import CustomLink from "./CustomLink";
 
 export default function MenuListComposition() {
@@ -83,8 +83,8 @@ export default function MenuListComposition() {
                   aria-labelledby="composition-button"
                   onKeyDown={handleListKeyDown}
                 >
-                  {navConstants.map((e: any[], index: any) => {
-                    return CustomLink({ link: e[1], index: index });
+                  {navConstants.map((e: LinkType, index: number) => {
+                    return CustomLink({ link: e, index: index });
                   })}
                   <MenuItem onClick={handleClose}>Profile</MenuItem>
                   <MenuItem onClick={handleClose}>My account</MenuItem>

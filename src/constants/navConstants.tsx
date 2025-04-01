@@ -5,3 +5,8 @@ export default [
   { to: "contact", display: "Contact" },
   { to: "blog", display: "Blog" },
 ];
+
+export interface LinkType {
+  to: string;
+  display: string;
+}
