@@ -13,7 +13,8 @@ const AnimationChOne: React.FC = () => {
   }, [play]);
 
   const animate = (p: p5) => {
-   
+    const d = 100;
+    let x = -1 * d/2;
 
     p.setup = () => {
       const parentElement = renderRef.current as HTMLElement | null;
@@ -25,11 +26,10 @@ const AnimationChOne: React.FC = () => {
     p.draw = () => {
       p.background(255);
 
-      const d = 100;
-      let x = -1 * d/2;
+    
       const circle = p.circle(x, 100, d);
 
-      circle.stroke(255, 0, 0);
+      circle.stroke(400, 0, 0);
       circle.fill(255, 0, 0);
 
       const infiniteLoop = (x: number, offset: number) => {
