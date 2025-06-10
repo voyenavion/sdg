@@ -41,7 +41,7 @@ const projects: Array<Project> = [
         to: "https://github.com/voyenavion/sdg",
       }
     ],
-  }
+  },
   {
     text: "Text Subscription App",
     summary:
