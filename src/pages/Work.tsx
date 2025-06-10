@@ -31,6 +31,18 @@ const projects: Array<Project> = [
     ],
   },
   {
+    text: "This Site (whoa, meta!)",
+    summary:
+      "This site is built from scratch using vite and react. I also host it using Cloudflare pages, and use Cloudflare to manage the domain as well (highly recommend for people with some technical ability).",
+    image: "/shaun-cropped.svg",
+    links: [
+      {
+        display: "Code",
+        to: "https://github.com/voyenavion/sdg",
+      }
+    ],
+  }
+  {
     text: "Text Subscription App",
     summary:
       "I developed this prototype to manage large numbers of customer text subscriptions using the Twilio API, Java, Spring Boot, React, and AWS.",
