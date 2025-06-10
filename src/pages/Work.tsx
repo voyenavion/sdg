@@ -33,7 +33,7 @@ const projects: Array<Project> = [
   {
     text: "This Site (whoa, meta!)",
     summary:
-      "This site is built from scratch using vite and react. I also host it using Cloudflare pages, and use Cloudflare to manage the domain as well (highly recommend for people with some technical ability).",
+      "This site is built from scratch using vite, react, and typescript. I also host it using Cloudflare pages, and use Cloudflare to manage the domain as well (highly recommend for people with some technical ability).",
     image: "/shaun-cropped.svg",
     links: [
       {
