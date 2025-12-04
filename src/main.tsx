@@ -12,8 +12,10 @@ import Contact from "./pages/Contact.tsx";
 import Blog from "./pages/Blog.tsx";
 import blogConstants from "./constants/blogConstants.tsx";
 import AnimationChOne from "./blog/AnimationChOne.tsx";
+import MortgageCalculator from './blog/mortgage-calculator/MortgageCalculator.jsx';
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -29,9 +31,13 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
               path={`blog/${blogConstants[0].to}`}
               element={<AnimationChOne />}
             />
+            <Route
+              path={`blog/${blogConstants[1].to}`}
+              element={<MortgageCalculator />}
+            />
           </Route>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
