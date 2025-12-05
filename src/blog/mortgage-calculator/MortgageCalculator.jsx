@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./MortgageCalculator.css"
+import { Paper } from "@mui/material";
 
 
 
@@ -49,7 +50,7 @@ export default function MortgageCalculator() {
   }
   
   return (
-    <div>
+    <Paper>
     <h1>Mortgage Calculator</h1>
     <div className="content-container">
     <Form onChange={onChange} input={input} contentArr={Object.keys(input)}>
@@ -59,7 +60,7 @@ export default function MortgageCalculator() {
     <div><h2>{`${"Total Payment Amount:"}`}</h2><h2>{`$${totalPayment()}`}</h2></div>
     <div><h2>{`${"Total Interest Paid:"}`}</h2><h2>{`$${interestPayment()}`}</h2></div>
 
-    </div>
+    </Paper>
     
   );
 }

@@ -12,10 +12,10 @@ export default function Home() {
         gap: "50px",
       }}
     >
-      <Container sx={{ display: "inline-flex", justifyContent: "center" }}>
+      <Container sx={{display: "inline-flex", justifyContent: "center" }}>
         <img
           src="/shaun-cropped.svg"
-          style={{ maxWidth: "100%", height: "auto" }}
+          style={{ maxWidth: "100%", height: "auto", background:"white" }}
         ></img>
       </Container>
 
