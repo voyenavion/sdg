@@ -24,7 +24,7 @@ function App() {
                 color={'common.white'}
                 component={NavLink}
                 underline='none'
-                sx={{'&:active': { color: deepOrange[400] }  }}
+                sx={{'&:hover': { color: deepOrange[400] }  }}
               >
                 <Typography variant="h5">Shaun David Gould</Typography>
               </Link>

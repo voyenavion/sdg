@@ -19,7 +19,7 @@ function CustomLink(props: CustomLinkProps) {
         component={NavLink}
         to={props.link.to}
         underline="hover"
-        sx={{ "&:hover": { "&:active": { color: deepOrange[400] } } }}
+        sx={{ "&:hover":  { color: deepOrange[400] }  }}
       >
         {props.link.display}
       </Link>
