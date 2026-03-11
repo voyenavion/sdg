@@ -6,5 +6,9 @@ export default [
   {
     to: 'mortgage-calculator',
     display: 'The cleanest mortgage calculator I could build'
+  },
+  {
+    to: 'animation-ch2',
+    display: 'animation: getting creative'
   }
 ];
