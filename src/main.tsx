@@ -11,8 +11,9 @@ import navConstants from "./constants/navConstants.tsx";
 import Contact from "./pages/Contact.tsx";
 import Blog from "./pages/Blog.tsx";
 import blogConstants from "./constants/blogConstants.tsx";
-import AnimationChOne from "./blog/AnimationChOne.tsx";
+import AnimationChOne from "./blog/animation/AnimationChOne.tsx";
 import MortgageCalculator from './blog/mortgage-calculator/MortgageCalculator.jsx';
+import AnimationChTwo from "./blog/animation/AnimationChTwo.tsx";
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -35,9 +36,13 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
               path={`blog/${blogConstants[1].to}`}
               element={<MortgageCalculator />}
             />
+            <Route
+              path={`blog/${blogConstants[2].to}`}
+              element={<AnimationChTwo />}
+            />
           </Route>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>
-);
+)
