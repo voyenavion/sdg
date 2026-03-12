@@ -9,6 +9,6 @@ export default [
   },
   {
     to: 'animation-ch2',
-    display: 'animation: getting creative'
+    display: 'Adding a bit of flair to my animation'
   }
 ];
