@@ -1,10 +1,11 @@
 
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import { Avatar, Box, Grid, Paper, Stack, Typography } from '@mui/material';
-import { useEffect } from 'react';
+import { Avatar, Box, Grid, Paper, Stack, Typography} from '@mui/material';
+import { useEffect} from 'react'
 import { Helmet } from 'react-helmet';
 import ReactPlayer from 'react-player';
 import postConstants from '../constants/postConstants';
+
 
 
 const projects = [
@@ -30,18 +31,19 @@ const projects = [
   }
 ]
 
+
+
 const props = postConstants[0]
 
 
-export default function StrangeGrace() {
-  
-  const black = '#15151579';
-  const lighterBlack = '#27272779';
+const StrangeGrace = () => {
+  const black = '#15151579'
+  const lighterBlack = '#27272779'
 
   useEffect(() => {
     const origFontStyle = document.body.style.background
     document.body.style.background = 'black'
-    return () => (document.body.style.fontSize = origFontStyle)
+    return () => {(document.body.style.fontSize = origFontStyle)}
   }, [])
 
   return (
@@ -51,9 +53,7 @@ export default function StrangeGrace() {
         <meta name="description" content={props.description} />
         <meta property="og:title" content={props.title} />
         <meta property="og:description" content={props.description} />
-        <meta
-          property="og:url" content={props.url}
-        />
+        <meta property="og:url" content={props.url} />
         <meta property="og:image" content={props.image} />
       </Helmet>
       <Stack
@@ -77,20 +77,18 @@ export default function StrangeGrace() {
             width: '90%',
             height: 'auto',
             background: lighterBlack,
-            color: 'grey.200'
+            color: 'grey.200',
+            alignContent: 'center',
+            justifyContent: 'center',
+            alignItems: 'center'
           }}
-          alignContent="center"
-          justifyContent="center"
-          alignItems="center"
         >
           <Stack
-            elevation={24}
             alignContent="center"
             justifyContent="center"
             alignItems="center"
           >
             <Box
-              item
               component="img"
               src="/000526560002_b.jpg"
               sx={{
@@ -98,12 +96,12 @@ export default function StrangeGrace() {
                 height: 'auto'
               }}
             ></Box>
-            <Box item>
+            <Box>
               <Typography variant="h4" align="center">
                 {'Strange Grace'}
               </Typography>
             </Box>
-            <Box item>
+            <Box>
               <Typography variant="h6" align="center">
                 {'Upperfields'}
               </Typography>
@@ -158,7 +156,7 @@ export default function StrangeGrace() {
                     </Typography>
                   </Grid>
                   <Grid item xs={2}>
-                    <PlayArrowIcon align="right"></PlayArrowIcon>
+                    <PlayArrowIcon sx={{align:"right"}}></PlayArrowIcon>
                   </Grid>
                 </Grid>
               </Paper>
@@ -169,3 +167,5 @@ export default function StrangeGrace() {
     </>
   )
 }
+
+export default StrangeGrace
