@@ -1,8 +1,7 @@
 
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import { Avatar, Box, Grid, Paper, Stack, Typography} from '@mui/material';
-import { useEffect} from 'react'
-import { Helmet } from 'react-helmet';
+import { Avatar, Box, Grid, Paper, Stack, Typography } from '@mui/material'
+import { useEffect } from 'react'
 import ReactPlayer from 'react-player';
 import postConstants from '../constants/postConstants';
 
@@ -48,21 +47,22 @@ const StrangeGrace = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{props.title}</title>
-        <meta name="description" content={props.description} />
-        <meta property="og:title" content={props.title} />
-        <meta property="og:description" content={props.description} />
-        <meta property="og:url" content={props.url} />
-        <meta property="og:image" content={props.image} />
-      </Helmet>
+      <title>{props.title}</title>
+      <link rel="icon" type="image/svg+xml" href={props.image} />
+
+      <meta name="description" content={props.description} />
+      <meta property="og:title" content={props.title} />
+      <meta property="og:description" content={props.description} />
+      <meta property="og:url" content={props.url} />
+      <meta property="og:image" content={props.image} />
       <Stack
         sx={{
           width: '100%',
           height: 'auto',
           background: black,
           color: 'grey.200',
-          m: 2
+          m: 2,
+          paddingBottom: 2
         }}
         alignContent="center"
         justifyContent="center"
@@ -132,14 +132,13 @@ const StrangeGrace = () => {
                 elevation={0}
                 sx={{
                   flexFlow: 'row',
-                  // m: 2,
-                  // p: 2,
                   background: lighterBlack,
                   color: 'grey.200',
                   width: '90%',
+                  maxWidth: '300px',
                   height: 'auto',
                   textDecoration: 'none',
-                  '&:hover': { color: 'grey' }
+                  '&:hover': { color: 'grey.600' }
                 }}
               >
                 <Grid container spacing={2} alignItems="center">
@@ -156,7 +155,13 @@ const StrangeGrace = () => {
                     </Typography>
                   </Grid>
                   <Grid item xs={2}>
-                    <PlayArrowIcon sx={{align:"right"}}></PlayArrowIcon>
+                    <PlayArrowIcon
+                      sx={{
+                        align: 'right',
+                        width: '100%',
+                        height: 'auto'
+                      }}
+                    ></PlayArrowIcon>
                   </Grid>
                 </Grid>
               </Paper>
